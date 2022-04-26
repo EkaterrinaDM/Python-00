@@ -2,10 +2,13 @@
 import re
 import itertools
 
+import re
+import itertools
 
-file1 = '33_Polynomial.txt'
-file2 = '33_Polynomial2.txt'
-file_sum = '34_Sum_polynomials.txt'
+
+file1 = '33'
+file2 = '33'
+file_sum = '34'
 
 # Получение данных из файла
 
@@ -14,7 +17,7 @@ def read_pol(file):
         pol = data.read()
     return pol
 
-# Получение списка кортежей каждого (<коэффициент>, <степень>)
+# Получение списка кортежей каждого (коэффициент и степень)
 
 def convert_pol(pol):
     pol = pol.replace('= 0', '')
@@ -28,7 +31,7 @@ def convert_pol(pol):
     pol = [tuple(int(x) for x in j if x != 'x') for j in pol]
     return pol
 
-# Получение списка кортежей суммы (<коэф1 + коэф2>, <степень>)
+# Получение списка кортежей суммы (коэф1 + коэф2, степень)
 
 def fold_pols(pol1, pol2):   
     x = [0] * (max(pol1[0][1], pol2[0][1] + 1))
