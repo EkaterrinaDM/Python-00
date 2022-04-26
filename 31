@@ -1,0 +1,18 @@
+# 31.	Задайте натуральное число N. Напишите программу, которая составит список простых множителей числа N.
+
+import os
+from math import pi
+from random import*
+os.system("cls")
+
+n = randint(1, 1001)
+print('Задано натуральное число = ', n)
+
+i = 2  
+while i <= n:
+    if n % i == 0:
+        print(i)
+        n = n/i
+        i -= 1
+    i += 1
+print()
