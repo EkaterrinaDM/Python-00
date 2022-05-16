@@ -1,12 +1,11 @@
 # 30. Вычислить число Пи c заданной точностью d
 #	Пример: при d = 0.001,  = 3.141. 10-1d≤10-10
 
-import os
-from math import pi
-from random import*
-os.system("cls")
+import math 
+P = 0.001 
 
-d = randint(1, 10)
-print('Вывод = ', d)
+P = str(P).split('.') 
+L = len(P[1]) 
+M = str(math.pi) 
+print(float(M[:L+2]))
 
-print('Пи = ', round(pi, d), '\n')
